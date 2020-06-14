@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Abas abertas</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">GetFirefoxTabs</a>
+            </nav>
+        </header>
+        <main role="main" class="flex-shrink-0">
+            <div class="container">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" class="font-weight-bold">#</th>
+                            <th scope="col" class="font-weight-bold">Page's Title</th>
+                            <th scope="col" class="font-weight-bold">URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        %for line in lines:
+                        <tr>
+                            <td>${loop.index + 1}</td>
+                            <td>
+                                ${line[0]}
+                            </td>
+                            <td>
+                                <a href="${line[1]}">
+                                    ${line[2]}...
+                                </a>
+                            </td>
+                        </tr>
+                        %endfor
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="page-footer font-small special-color pt-4">
+
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+                        <!-- Content -->
+                        <h5 class="text-uppercase">Automatic generation of open Firefox tabs</h5>
+                        <p>
+                            Most of the time, a large number of open tabs in the browser creates more problems than convenience.
+                            This link generator was developed in order to no longer lose content, allowing you to use a cleaner browser.
+                            As a result, a page with the listing of the currently open tabs is generated.
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">
+                &copy; 2020 Copyright
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </body>
+</html>
