@@ -15,7 +15,8 @@ if [[ ! -d "./sessionstore_bkp" ]]; then
     mkdir ./sessionstore_bkp
 fi
 
-output_file="${HOME}/workspace/gztabs/script/sessionstore_bkp/${timestamp}_sessionstore.json"
+CUR_PATH=$(pwd)
+output_file="${CUR_PATH}/sessionstore_bkp/${timestamp}_sessionstore.json"
 
 # Decompress Mozilla-flavor LZ4 files
 python3 mozlz4.py -d < $input_file > $output_file
